@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Zoophie Animal App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #06b6d4 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="paw" patternUnits="userSpaceOnUse" width="20" height="20"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23paw)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .app-logo {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 800;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 400;
+            position: relative;
+            z-index: 2;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .intro {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border-left: 6px solid #3b82f6;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            color: #475569;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            color: #1e40af;
+            font-size: 1.6em;
+            font-weight: 700;
+            margin: 40px 0 20px 0;
+            padding: 15px 0;
+            border-bottom: 3px solid #e2e8f0;
+            position: relative;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            border-radius: 2px;
+        }
+
+        h3 {
+            color: #1e40af;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
+        }
+
+        p {
+            margin-bottom: 18px;
+            color: #475569;
+            text-align: justify;
+            font-size: 1em;
+        }
+
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .important-notice {
+            background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+            border: 2px solid #f59e0b;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .important-notice::before {
+            content: '⚠️';
+            font-size: 1.5em;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .important-notice h3 {
+            color: #92400e;
+            margin-left: 40px;
+            margin-top: 0;
+        }
+
+        .important-notice p {
+            color: #92400e;
+            margin-left: 40px;
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .highlight-section {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border-left: 6px solid #10b981;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #f0f9ff 0%, #dbeafe 100%);
+            padding: 35px;
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 2px solid #93c5fd;
+            text-align: center;
+        }
+
+        .contact-section h3 {
+            color: #1e40af;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 40px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-top: 2px solid #e2e8f0;
+            color: #64748b;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .version-info {
+            font-weight: 600;
+            color: #3b82f6;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 40px 25px;
+            }
+            
+            .content {
+                padding: 35px 25px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .important-notice {
+                padding: 20px;
+            }
+            
+            .important-notice h3,
+            .important-notice p {
+                margin-left: 30px;
+            }
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #3b82f6, #06b6d4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-logo">🦎</div>
+            <h1>Zoophie</h1>
+            <p class="subtitle">Wildlife Discovery & Conservation Platform</p>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <p><strong>Welcome to Zoophie!</strong> These Terms and Conditions govern your use of our wildlife discovery and conservation platform. By accessing or using Zoophie, you agree to be bound by these terms. Please read them carefully before using our services.</p>
+            </div>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By downloading, installing, accessing, or using the Zoophie application, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions and our Privacy Policy. If you do not agree with any part of these terms, you must not use our services.</p>
+            
+            <div class="important-notice">
+                <h3>Important Legal Notice</h3>
+                <p>These terms constitute a legally binding agreement between you and Zoophie. Your continued use of the app signifies your acceptance of any updates to these terms.</p>
+            </div>
+
+            <h2>2. Description of Service</h2>
+            <p>Zoophie is an educational platform dedicated to wildlife discovery, conservation awareness, and environmental education. Our services include:</p>
+            <ul>
+                <li><strong>Animal Encyclopedia:</strong> Comprehensive information about living and extinct species</li>
+                <li><strong>Conservation Database:</strong> Current conservation status and protection efforts</li>
+                <li><strong>Interactive Learning:</strong> Educational games, quizzes, and challenges</li>
+                <li><strong>Community Features:</strong> User-generated content and wildlife photography sharing</li>
+                <li><strong>Location Services:</strong> Local wildlife information and nearby conservation sites</li>
+                <li><strong>Educational Resources:</strong> Articles, videos, and research materials</li>
+                <li><strong>Progress Tracking:</strong> Personal learning journey and achievement system</li>
+            </ul>
+
+            <h2>3. User Eligibility and Registration</h2>
+            <h3>3.1 Age Requirements</h3>
+            <ul>
+                <li>Users must be at least 13 years old to create an account independently</li>
+                <li>Users between 13-17 require parental consent</li>
+                <li>Users under 13 may use the app with direct parental supervision</li>
+                <li>Parents are responsible for monitoring their minor children's use of the app</li>
+            </ul>
+            
+            <h3>3.2 Account Registration</h3>
+            <p>You agree to:</p>
+            <ul>
+                <li>Provide accurate, current, and complete information during registration</li>
+                <li>Maintain and promptly update your account information</li>
+                <li>Keep your login credentials secure and confidential</li>
+                <li>Accept responsibility for all activities under your account</li>
+                <li>Notify us immediately of any unauthorized access to your account</li>
+            </ul>
+
+            <h2>4. Acceptable Use Policy</h2>
+            <div class="highlight-section">
+                <h3>You agree to use Zoophie responsibly and ethically. The following activities are strictly prohibited:</h3>
+            </div>
+            
+            <h3>4.1 Prohibited Content</h3>
+            <ul>
+                <li>Content that promotes animal cruelty or illegal wildlife activities</li>
+                <li>Harassment, bullying, or threatening behavior toward other users</li>
+                <li>Spam, advertising, or commercial solicitation</li>
+                <li>False or misleading information about wildlife or conservation</li>
+                <li>Content that violates intellectual property rights</li>
+                <li>Explicit, offensive, or inappropriate material</li>
+                <li>Personal information of other users without consent</li>
+            </ul>
+
+            <h3>4.2 Prohibited Activities</h3>
+            <ul>
+                <li>Attempting to hack, reverse engineer, or compromise our systems</li>
+                <li>Using automated tools or bots to access our services</li>
+                <li>Sharing your account credentials with others</li>
+                <li>Creating multiple accounts to circumvent restrictions</li>
+                <li>Interfering with other users' enjoyment of the app</li>
+                <li>Collecting or harvesting user data without permission</li>
+            </ul>
+
+            <h2>5. User-Generated Content</h2>
+            <h3>5.1 Content Ownership</h3>
+            <p>You retain ownership of the content you create and share through Zoophie. However, by submitting content, you grant us a worldwide, royalty-free license to:</p>
+            <ul>
+                <li>Display, distribute, and promote your content within the app</li>
+                <li>Use your content for educational and conservation purposes</li>
+                <li>Modify or adapt your content for technical compatibility</li>
+                <li>Share your content with our conservation partners (with attribution)</li>
+            </ul>
+
+            <h3>5.2 Content Standards</h3>
+            <p>All user-generated content must:</p>
+            <ul>
+                <li>Be original or properly attributed</li>
+                <li>Comply with our community guidelines</li>
+                <li>Support wildlife conservation and education goals</li>
+                <li>Respect wildlife and natural habitats</li>
+                <li>Be accurate and factual to the best of your knowledge</li>
+            </ul>
+
+            <h2>6. Privacy and Data Protection</h2>
+            <p>Your privacy is important to us. Our data collection and usage practices are detailed in our Privacy Policy, which is incorporated into these terms by reference. Key points include:</p>
+            <ul>
+                <li>We collect minimal data necessary for app functionality</li>
+                <li>Your personal information is never sold to third parties</li>
+                <li>Educational data may be shared with conservation organizations</li>
+                <li>You have control over your data and privacy settings</li>
+                <li>We implement industry-standard security measures</li>
+            </ul>
+
+            <h2>7. Intellectual Property Rights</h2>
+            <h3>7.1 Our Content</h3>
+            <p>All content provided by Zoophie, including but not limited to:</p>
+            <ul>
+                <li>Animal information and educational materials</li>
+                <li>Images, videos, and multimedia content</li>
+                <li>App design, interface, and user experience</li>
+                <li>Logos, trademarks, and branding elements</li>
+                <li>Software code and algorithms</li>
+            </ul>
+            <p>Is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, or create derivative works without our express written permission.</p>
+
+            <h3>7.2 Fair Use</h3>
+            <p>You may use our content for personal, educational, and non-commercial purposes in accordance with fair use principles. Commercial use requires prior written authorization.</p>
+
+            <h2>8. Third-Party Services and Content</h2>
+            <p>Zoophie may integrate with third-party services and display content from external sources:</p>
+            <ul>
+                <li><strong>Conservation Organizations:</strong> Wildlife data and research from accredited institutions</li>
+                <li><strong>Mapping Services:</strong> Location-based features for wildlife habitats</li>
+                <li><strong>Educational Partners:</strong> Supplementary learning materials</li>
+                <li><strong>Social Media:</strong> Sharing capabilities with external platforms</li>
+            </ul>
+            <p>We are not responsible for the availability, accuracy, or content of third-party services. Your interactions with third parties are governed by their respective terms and policies.</p>
+
+            <h2>9. Premium Features and Subscriptions</h2>
+            <h3>9.1 Free and Premium Tiers</h3>
+            <p>Zoophie offers both free and premium features:</p>
+            <ul>
+                <li><strong>Free Tier:</strong> Basic animal information, limited daily content, standard features</li>
+                <li><strong>Premium Tier:</strong> Unlimited access, exclusive content, advanced features, ad-free experience</li>
+            </ul>
+
+            <h3>9.2 Subscription Terms</h3>
+            <ul>
+                <li>Subscriptions automatically renew unless cancelled</li>
+                <li>Payment is charged at the beginning of each billing period</li>
+                <li>You can cancel anytime through your account settings</li>
+                <li>Cancellation takes effect at the end of the current billing period</li>
+                <li>No refunds for partial months or unused portions</li>
+            </ul>
+
+            <h2>10. Disclaimers and Limitations of Liability</h2>
+            <div class="important-notice">
+                <h3>Educational Purpose Disclaimer</h3>
+                <p>Zoophie is designed for educational and conservation awareness purposes. While we strive for accuracy, wildlife information should not be used as the sole basis for critical decisions affecting animal welfare or conservation efforts.</p>
+            </div>
+
+            <h3>10.1 Service Availability</h3>
+            <p>We provide Zoophie on an "as is" and "as available" basis. We do not guarantee:</p>
+            <ul>
+                <li>Uninterrupted or error-free service</li>
+                <li>Complete accuracy of all wildlife information</li>
+                <li>Compatibility with all devices or operating systems</li>
+                <li>Permanent availability of any specific feature</li>
+            </ul>
+
+            <h3>10.2 Limitation of Liability</h3>
+            <p>To the maximum extent permitted by law, Zoophie shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or use, arising from your use of our services.</p>
+
+            <h2>11. Termination</h2>
+            <h3>11.1 Your Right to Terminate</h3>
+            <p>You may terminate your account at any time by:</p>
+            <ul>
+                <li>Using the account deletion feature in app settings</li>
+                <li>Contacting our support team</li>
+                <li>Sending a termination request via email</li>
+            </ul>
+
+            <h3>11.2 Our Right to Terminate</h3>
+            <p>We reserve the right to suspend or terminate your account for:</p>
+            <ul>
+                <li>Violation of these Terms and Conditions</li>
+                <li>Harmful or disruptive behavior</li>
+                <li>Fraudulent or illegal activity</li>
+                <li>Extended periods of inactivity</li>
+                <li>Technical or security reasons</li>
+            </ul>
+
+            <h2>12. Updates and Modifications</h2>
+            <p>We may update these Terms and Conditions periodically to reflect:</p>
+            <ul>
+                <li>Changes in our services or features</li>
+                <li>Legal or regulatory requirements</li>
+                <li>Industry best practices</li>
+                <li>User feedback and suggestions</li>
+            </ul>
+            <p>We will notify you of significant changes through the app or email. Your continued use constitutes acceptance of the updated terms.</p>
+
+            <h2>13. Governing Law and Dispute Resolution</h2>
+            <p>These terms are governed by the laws of [Your Jurisdiction]. Any disputes will be resolved through:</p>
+            <ul>
+                <li><strong>First:</strong> Good faith negotiation between parties</li>
+                <li><strong>Second:</strong> Mediation through a mutually agreed mediator</li>
+                <li><strong>Third:</strong> Binding arbitration if mediation fails</li>
+            </ul>
+
+            <h2>14. Miscellaneous</h2>
+            <h3>14.1 Entire Agreement</h3>
+            <p>These Terms and Conditions, together with our Privacy Policy, constitute the entire agreement between you and Zoophie regarding your use of our services.</p>
+
+            <h3>14.2 Severability</h3>
+            <p>If any provision of these terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
+
+            <h3>14.3 Force Majeure</h3>
+            <p>We are not liable for any failure to perform our obligations due to circumstances beyond our reasonable control, including natural disasters, government actions, or technical failures.</p>
+
+            <div class="contact-section">
+                <h3>Questions or Concerns?</h3>
+                <p>We're here to help! If you have any questions about these Terms and Conditions or need assistance with our services, please don't hesitate to reach out.</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <strong>Email Support</strong>
+                        <p>legal@zoophie.app</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <strong>In-App Support</strong>
+                        <p>Settings → Help & Support</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🌐</span>
+                        <strong>Help Center</strong>
+                        <p>www.zoophie.app/help</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <strong>Emergency Contact</strong>
+                        <p>For urgent legal matters</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-section">
+                <p><strong>Thank you for choosing Zoophie!</strong> Together, we're building a community dedicated to wildlife conservation and education. Your responsible use of our platform helps protect and preserve the amazing diversity of life on our planet.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="version-info">Terms and Conditions v3.0</p>
+            <p><strong>Last Updated:</strong> August 15, 2025</p>
+            <p><strong>Effective Date:</strong> August 15, 2025</p>
+            <p>© 2025 Zoophie Wildlife Discovery Platform. All rights reserved.</p>
+        </div>
+    </div>
+
+    <div class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script>
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollButton = document.querySelector('.scroll-to-top');
+            if (window.pageYOffset > 300) {
+                scrollButton.style.display = 'flex';
+            } else {
+                scrollButton.style.display = 'none';
+            }
+        });
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
